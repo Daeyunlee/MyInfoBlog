@@ -125,7 +125,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "url": "https://github.com/Daeyunlee/MyInfo",
-  "description": "this is my Info blog"
+  }
 }

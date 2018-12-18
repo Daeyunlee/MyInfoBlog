@@ -26,7 +26,13 @@
         }
     }
 
+    .preview {
+        visibility: hidden;
+    }
+
     @include media("<medium"){
-        
+        .preview {
+            visibility: inherit;
+        }
     }
 }

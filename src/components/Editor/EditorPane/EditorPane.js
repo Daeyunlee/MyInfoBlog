@@ -8,7 +8,7 @@ import CodeMirror from 'codemirror';
 import 'codemirror/mode/markdown/markdown';
 // 마크 다운 문법 색생, 마크다운 내부에 들어가는 코드 색상
 
-import 'codemirror/mode/javascript/javascriprt';
+import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/jsx/jsx';
 import 'codemirror/mode/css/css';
 import 'codemirror/mode/shell/shell';
@@ -23,6 +23,21 @@ const cx = classNames.bind(styles);
 class EditorPane extends Component {
 
   editor = null // 에디터
+  codeMirror= null
+
+  initializeEditor = () => {
+    this.codeMirror = CodeMirror(this.editor, {
+      mode: 'markdown',
+      theme: 'monokai',
+      lineNumbers: true, // 왼쪽에 라인 넘버 띄우기
+      lineWrapping: true // 내용이 너무 길면 다음 줄에 작성
+    })
+  }
+
+  // 마운트 되면 markdown 호출
+  componentDidMount() {
+    this.initializeEditor();
+  }
 
   render () {
 
@@ -32,7 +47,10 @@ class EditorPane extends Component {
           className={cx('title')} 
           placeholder="제목을 입력하세요" 
         />
-        <div className = {cx('code-editor')}></div>
+        <div 
+          className = {cx('code-editor')}
+          ref={ref => this.editor = ref}
+        ></div>
         <div className={cx('tags')}>
           <div className={cx('description')}>태그</div>
           <input name="tags" placeholder="태그를 입력하세요 (쉼표로 구분)" />

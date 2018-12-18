@@ -1,7 +1,7 @@
 @import 'utils';
 
 .editor-pane{
-    flex: 1;
+    flex: 1; 
     
     display: flex;
     flex-direction: column;
@@ -39,6 +39,18 @@
     .code-editor {
         flex: 1; // 남은 영역 다 차지
         background: $oc-gray-9; //이게 사실상 검은색
+        display: flex;
+        flex-direction: column; // 세로 정렬
+        /*
+            앞 부분에 :global을 붙이면
+            cssModule이 적용되지 않는다.
+        */
+        :global .CodeMirror {
+            font-size: 1rem;
+            flex: 1;
+            font-family: 'D2 Coding';
+        }
+
     }
     .tags {
         padding-left: 1rem;

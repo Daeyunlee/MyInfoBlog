@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -44,3 +45,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 .env에 지정한 NODE_PATH=src 로 컴포넌트 호출 시 절대경로로 src에서 불러올 수 있다.
+=======
+# MyInfoBlog
+It's my first project
+>>>>>>> b31cfa4e99e262935cda102a57c6d682ba81f573
