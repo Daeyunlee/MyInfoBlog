@@ -1,0 +1,35 @@
+/* body, 타이포그래피 등 기본 스타일 설정 */
+@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import url("//cdn.jsdelivr.net/gh/velopert/font-d2coding@1.2.1/d2coding.css");
+/*
+    첫번째 폰트는 제목에 사용될 폰트이고
+    두번쨰 폰트는 markdown에 사용될 폰트이다.
+*/
+
+body {
+    margin: 0;
+    box-sizing: border-box; // 무슨 설정이지
+    /*
+        box-sizing은 엘리먼트의 너비를 padding과 테두리가
+        결정 하지 않는다
+        이러한 방식으로 하면 항상 지정한 크기의 엘리먼트로
+        사용할 수 있다.
+    */
+    font-family: "Noto Sans KR", sans-serif; // 마지막에 들어간 건 뭐지 제목에 사용될 폰트
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: gratscale;
+}
+
+// box-sizing 일괄 설정 얘는 뭐하는 메서드인지 모르겠다.
+* {
+    box-sizing: inherit;
+}
+
+// 링크 스타일 밑줄 및 색상 무효화
+/*
+    a 태그의 기본 스타일 옵션을 초기화 시킨다.
+*/
+a {
+    text-decoration: inherit;
+    color: inherit;
+}

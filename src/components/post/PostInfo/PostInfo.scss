@@ -1,0 +1,83 @@
+@import 'utils';
+
+.post-info {
+    background: $oc-gray-1;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    // min-height: calc(100vh);
+    // color: white;
+    .info {
+        width: 1024px;
+        padding: 1rem;
+        .title{
+            display: flex;
+            // justify-content: center;
+            // align-content: center;
+            h1 {
+                font-weight: 300;
+                font-size: 3rem;
+                margin: 0 auto;
+                word-wrap: break-word; // 다음 줄로 넘어가기
+            }
+        }
+        .tags {
+            margin-top: 1rem;
+            font-size: 1.25rem;
+            font-weight: 500;
+            NavLink {
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            NavLink + NavLink {
+                margin-left: 0.25rem // 사이 여백
+            }
+        }
+        .date {
+            text-align: right;
+            opacity: 0.75; // 애는 뭐지
+            font-style: italic;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .post-body {
+            text-align: center;
+            justify-content: center;
+        }
+    }
+
+    @include media("<large") {
+        .info {
+            h1 {
+                font-size: 2rem
+            }
+            .tags, .date {
+                font-size: 1rem;
+            }
+            width: 768px;
+        }
+    }
+    @include media("<medium") {
+        height: auto;
+        padding-bottom: 4rem;
+        .info {
+            padding-top: 0;
+            margin: 0;
+            .tags {
+                margin-top: 0.25rem;
+            }
+            .tags, .date {
+                font-size: 0.85rem;
+            }
+        }
+    }
+    @include media("<small"){
+        padding: 0;
+        .info {
+            padding-right: 0.3rem;
+            padding-left: 0.3rem;
+        }
+    }
+}

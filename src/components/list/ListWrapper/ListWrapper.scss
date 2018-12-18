@@ -1,0 +1,24 @@
+@import 'utils';
+
+.List-wrapper {
+    width: 768px;
+    margin: 0 auto; // %*#@*%% 현재 0을 지운 상태이다
+    /*
+        1024px은 크기는 하지만 화면을 다 채우기에는
+        부족한 크기이다.
+        margin 에 첫번째 인자 0은 양쪽을 고르게 준다는
+        의미인가
+        auto는 그 요소에 크기에 맞춰 양쪽에 마진 값을
+        고르게 주는건가.
+    */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-left: 1rem;
+    @include media("<large") {
+        width: 512px;
+    }
+    @include media("<medium"){
+        width: 380px;
+    }
+}

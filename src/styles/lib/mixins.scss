@@ -1,0 +1,31 @@
+// source : https://codepen.io/dbox/pen/RawBEW
+@mixin material-shadow ($z-depth: 1, $strength: 1, $color: black) {
+    @if $z-depth == 1 {
+        box-shadow: 0 1px 3px rgba($color, $strength * 0.14), 0 1px 2px rgba($color, $strength * 0.24);
+        /*
+            뭐가 뭔지 감이 잘 오지 않는다 믹신 material-shadow를 호출 하여 파라미터를 넣어주면 알아서 설정이 되는건가.
+            저기 $ 가 붙은 변수들은 전역 변수로 import해서 사용 할 수 있는건데...
+            음 얘를 사용할 떄 잘 봐야 겠다 어떻게 사용하는지 확인 해야겠어
+            현재 저기 파라미터에 들어있는 값들은 기본 값이고 저것 들을 내가 임의로 지정하면
+            그림자를 쉽게 설정 할 수 있는건가.
+        */
+    }
+    @if $z-depth == 2 {
+        box-shadow: 0 3px 6px rgba($color, $strength * 0.16), 0 3px 6px rgba($color, $strength * 0.23);
+    }
+    @if $z-depth == 3 {
+        box-shadow: 0 10px 20px rgba($color, $strength  * 0.19), 0 6px 6px rgba($color, $strength * 0.23);
+    }
+    @if $z-depth == 4 {
+        box-shadow: 0 15px 30px rgba($color, $strength * 0.25), 0 10px 10px rgba($color, $strength * 0.22);
+    }
+    @if $z-depth == 5 {
+        box-shadow: 0 20px 40px rgba($color, $strength * 0.30), 0 15px 12px rgba($color, $strength * 0.22);
+    }
+    @if ($z-depth < 1) or ($z-depth > 5) {
+        @warn "$z-depth must be between 1 and 5";
+        /*
+            여기서 문자열로 경고 문을 띄울 수 있는건가? 신기하네
+        */
+    }
+}

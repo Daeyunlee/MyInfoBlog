@@ -1,0 +1,21 @@
+@import 'utils';
+
+.post-body {
+    .paper{
+        padding: 2rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        // background: white;
+        // @include material-shadow(4, 0.5);
+        // 위로 3rem 이동 시켜 postinfo침범
+        // transform: translateY(-3rem) 이지만 우린 그위에 쓴다.
+        margin: 0 auto;
+        min-height: 20rem;
+
+        border: 1px solid black;
+        // width: 1024px;
+        // @include media("<large"){width: 768px;}
+        // @include media("<medium"){width: calc(100%-2rem);}
+        @include media("<small"){padding: 1rem;}
+    }
+}

@@ -1,0 +1,32 @@
+@import 'utils';
+
+.editor-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: $oc-green-9;
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex; // 이거는 공간을 유동적으로 나누게 하는건가.
+    align-items: center;
+    // .submit { // 오른쪽 정렬
+        margin-left: auto;
+    // }
+    .brand {
+        // justify-self: center;
+        // 로고
+        margin: 0 auto;
+        // align-self: center;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 1000;
+        &:hover {
+            color: rgba(255,255,255,0.75);
+        }
+    }
+
+    @include media("<medium"){
+        
+    }
+}

@@ -1,0 +1,7 @@
+@import 'lib/_all';
+/*
+    cssModule에서는 파일 이름 앞에 _는 생략 가능?
+    반응형 디자인에 참고할 구간을 변소로 저장 이렇게 저장한 변수는 쉽게 호출하여 쓸 수 있다.
+*/
+
+$breakpoints: (small: 375px, medium: 768px, large: 1024px, wide: 1400px);

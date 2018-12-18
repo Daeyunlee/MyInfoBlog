@@ -1,0 +1,15 @@
+@import 'utils';
+
+.page-template {
+    margin-top: 3rem;
+    main {
+        background: $oc-gray-1;
+        min-height: calc(100vh);
+    }
+
+    @include media("<small"){
+        main{
+            min-height: 0;
+        }
+    }
+}
