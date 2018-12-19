@@ -49,3 +49,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 # MyInfoBlog
 It's my first project
 >>>>>>> b31cfa4e99e262935cda102a57c6d682ba81f573
+
+현재 프리뷰 버튼이 완성 되지 않았다.
+Link를 통해 구현 할지 버튼 이벤트로 구성 할지 계획해서 API 연동이 끝난 후 구현하기
+
