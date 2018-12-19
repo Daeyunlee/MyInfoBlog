@@ -37,7 +37,7 @@ class EditorTemplate extends Component {
     separator에서 벗어나는 순간 동작이 정지 되기 떄문이다.
   */
   render() {
-    const { header, editor, preview} = this.props;
+    const { header, editor, preview, disabled } = this.props;
     const {handleSeparatorMouseDown} = this;
     const {leftPercentage} = this.state;
 
@@ -57,16 +57,17 @@ class EditorTemplate extends Component {
       <div className={cx('editor-template')}>
         {header}
         <div className={cx('panes')}>
-          <div className={cx('pane', 'editor')} style = {leftStyle}>
+          <div className={cx('pane', 'editor', {disabled})} style = {leftStyle}>
             {editor}
           </div>
-          <div className={cx('pane', 'preview')} style = {rightStyle}>
+          <div className={cx('pane', 'preview', {disabled})} style = {rightStyle}>
             {preview}
           </div>
           <div
             className={cx('separator')}
             style={separatorStyle}
-            onMouseDown = {handleSeparatorMouseDown} />
+            onMouseDown = {handleSeparatorMouseDown}
+          />
         </div>
       </div>
     );

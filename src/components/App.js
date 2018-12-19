@@ -13,6 +13,7 @@ const App = () => {
                     <Route path='/tag/:tag/:page?' component={ListPage} />
                     <Route path='/post/:id' component={PostPage} />
                     <Route path='/editor' component={Editor} />
+                    <Route path='/editor/:view' component={Editor} />
                     <Route path='/info/:pass' component={InfoPage} />
                     <Route component={NotFound} />
                 </Switch>

@@ -15,7 +15,7 @@ export const changeInput = createAction(CHANGE_INPUT);
 const initialState = Map({
     title : '',
     markdown : '',
-    tags: ''
+    tags: '',
 });
 
 //reducer
