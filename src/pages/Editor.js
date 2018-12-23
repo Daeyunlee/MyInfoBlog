@@ -11,10 +11,10 @@ import EditorContainer from 'containers/editor/EditorContainer';
 */
 
 const EditorPage = ({match}) => {
-    console.log(match);
+    const {type} = match.params;
     return (
         <EditorTemplate 
-            header = {<EditorHeaderContainer />}
+            header = {<EditorHeaderContainer type = {type}/>}
             editor = {<EditorContainer />}
             preview = {<PreviewPaneContainer />}
         />

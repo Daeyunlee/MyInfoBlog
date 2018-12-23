@@ -3,6 +3,7 @@ export {default as InfoPage} from './InfoPage';
 export {default as ListPage} from './ListPage';
 export {default as PostPage} from './PostPage';
 export {default as NotFound} from './NotFound';
+export {default as Home} from './home';
 
 /*
     이렇게 index.js를 만들어서 파일을 한데 모아서 호출 하면

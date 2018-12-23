@@ -6,26 +6,41 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 
-const PostItem = ({id, tags}) => (
-  <div className={cx('post-item')}>
-    <h2><NavLink to = {`/post/${id}`} >타이틀</NavLink></h2>
-    <div className={cx('date')}>2018-12-18</div>
-    <p>내용</p>
-    <div className={cx('tags')}>
-      <NavLink to = {`/tags/${tags}`} >#태그</NavLink>
-      <NavLink to = {`/tags/${tags}`} >#태그</NavLink>
-      <NavLink to = {`/tags/${tags}`} >#태그</NavLink>
+const PostItem = ({postNum, tags, writeDate, title, postType}) => {
+  const tagsLink = tags.map(tag => (
+    <NavLink to={`/tag/${tag}/1`}key={tag}>#{tag}</NavLink>
+  ));
+  return (
+    <div className={cx('post-item')}>
+      <h2><NavLink to = {`/post/${postNum}/${postType}`} >{title}</NavLink></h2>
+      <div className={cx('date')}>{writeDate}</div>
+      <div className={cx('tags')}>
+        {tagsLink}
+      </div>
     </div>
-  </div>
-);
+  );
+}
 
-const PostList = () => (
-  <div className={cx('post-list')}>
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
-  </div>
-)
+const PostList = ({pageList}) => {
+  const ItemList = pageList.map(page => {
+    const {title, postNum, writeDate, tags, postType} = page;
+    return (
+      <PostItem 
+        tags = {tags}
+        title = {title}
+        postNum = {postNum}
+        writeDate = {writeDate}
+        key = {postNum}
+        postType = {postType}
+      />
+    )
+  })
+
+  return (
+    <div className={cx('post-list')}>
+      {ItemList}
+    </div>
+  )
+}
 
 export default PostList;

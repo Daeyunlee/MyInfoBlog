@@ -14,8 +14,7 @@ const Button = ({
     to 값이 존재하면 Link를 그렇지 않으면 div를 사용한다
     비 활성화 되어 있는 버튼 일때도 div를 사용한다.
   */
-  
-  const Element = ( to && !disabled ) ? NavLink : Div ;
+  const Element = ( to && !disabled  ) ? NavLink : Div ;
 
   /*
     비 활성화 즉, disabled가 있을 때는 Div가 활성화 되며

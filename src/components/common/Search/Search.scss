@@ -1,0 +1,18 @@
+@import 'utils';
+
+.searchBox {
+    .search{
+        background: $oc-gray-3;
+        border: none;
+        outline: none;
+        padding: 0.25rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        border-radius: 10px;
+        border-bottom: 1px solid $oc-gray-4;
+        &::placeholder {
+            color: $oc-gray-8;
+        }
+    }
+    
+}

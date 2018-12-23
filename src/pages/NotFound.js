@@ -11,6 +11,7 @@ const NotFound = () => {
     return (
         <div>
             잘 못 된 접근!
+            왜 type일떄 이게 오는건지 이해를 할 수 가 없어요!
         </div>
     );
 }

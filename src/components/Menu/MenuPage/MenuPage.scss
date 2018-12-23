@@ -1,0 +1,71 @@
+@import 'utils';
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes slideUp {
+    0% {transform: translateX(50vh);}
+    100% {transform: translateX(0);}
+}
+
+@keyframes slideDown {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(50vh);}
+}
+
+.MenuBackground {
+    background: rgba(100, 100, 100, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+    &.enter {
+        animation: fadeIn 0.25s ease-in both;
+    }
+    &.leave {
+        animation: fadaOut 0.25s ease-in both;
+    }
+}
+/*
+    animation은 css animation을 조절 한다.
+    첫번째 인자로는 애니메이션 방식이다.
+    얘는 원래 정해진 얘를 써도 되고 본인이 만들어서
+    써도 되는거 같다. 두번째는 애니메이션 유지 시간이고
+    세번째랑 네번째는 뭔지 모르겠다.
+    both가 둘다 라는건 알겠는데
+    무슨 의미 인지는 모르겠다.
+*/
+.menuList {
+    background:rgba(39, 38, 38, 0.8);
+    z-index : 9;
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    width: 50%;
+    @include material-shadow(3, 0.5);
+    
+    .menu {
+        display: flex;
+        // align-items: center;
+
+        // justify-items: center;
+        width: 100%;
+        background: white;
+        &.enter {
+            animation: slideUp 0.25s ease-in both;
+        }
+        &.leave {
+            animation: fadeOut 0.25s ease-in both;
+        }
+    }
+}

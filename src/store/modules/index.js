@@ -3,6 +3,9 @@ export { default as post } from './post';
 export { default as info } from './info';
 export { default as base } from './base';
 export { default as editor} from './editor';
+export { default as home} from './home';
+export { default as search} from './search';
+export { default as login } from './Login'
 export { penderReducer as pender } from 'redux-pender';
 
 /*

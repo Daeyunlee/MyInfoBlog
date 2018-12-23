@@ -28,20 +28,29 @@
         //내부 아이템 세로 가운데 정렬
         display: flex;
         align-items: center;
-
+        // justify-content: center;
+        // margin-right: auto;
+        // margin-left: auto;
         .brand {
             // 로고
-            color: white;
+            margin: 0 auto;
+            color: $oc-gray-2;
             font-size: 1.5rem;
-            font-weight: 1000;
+            font-weight: 500;
             &:hover {
                 color: rgba(255,255,255,0.75);
             }
         }
 
+        .center {
+            margin: 0 auto;
+        }
+
         .right {
             // 오른쪽
-            margin-left: auto;            
+            // margin-left: auto;            
+            margin: 0 auto;
+
         }
 
         //반응형 레이아웃

@@ -15,6 +15,7 @@ class EditorContainer extends Component {
         const {title, tags, markdown} = this.props;
         const {handleChangeInput} = this;
 
+        console.log(title, tags, markdown);
         return (
             <EditorPane 
                 title = {title}

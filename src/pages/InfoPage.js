@@ -1,4 +1,5 @@
 import React from 'react';
+import InfoTemplate from 'components/info/InfoTemplate'
 
 /*
     라우트 처리가 되어 이동하게 될 컴포넌트이다.
@@ -6,12 +7,14 @@ import React from 'react';
     즉, 컴포넌트를 모아서 시각적으로 표시될 컴포넌트이다
 */
 
-const InfoPage = () => {
+const InfoPage = ({match}) => {
+
+    const {pass} = match.params
+
+    if(pass !== "트랜스박스") return null;
 
     return (
-        <div>
-            My Info
-        </div>
+        <InfoTemplate />
     );
 }
 

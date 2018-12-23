@@ -1,0 +1,19 @@
+@import 'utils';
+
+.login {
+    background: rgba(36, 187, 74, 0.5);
+    padding: 2rem;
+    .login-title{
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+    .login-input {
+        margin-top: 0.25rem;
+    }
+}
+
+.options {
+    padding: 1rem;
+    background: $oc-gray-1;
+    text-align: right;
+}
